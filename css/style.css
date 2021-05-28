@@ -1,0 +1,232 @@
+/* SOME DEFAULTS */
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  background: #f7f7f7;
+  overflow: hidden;
+}
+
+button,
+div,
+input {
+  outline: 0;
+  border: none;
+  background: none;
+}
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+/* Part 1  */
+
+.part-one {
+  background: #101010;
+  width: 30vw;
+  height: 100vh;
+  box-shadow: 0px 0px 10px 20px rgb(255, 0, 0);
+}
+
+.part-two {
+  background: #121212;
+  width: 70vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  margin-left: 30vw;
+}
+
+.add-pssword {
+  background-color: dodgerblue;
+  color: white;
+  padding: 2%;
+  width: 87%;
+  margin-left: 5%;
+  margin-top: 5%;
+  font-size: 1.2em;
+  border-radius: 10px;
+  color: white;
+}
+
+.passwords {
+  margin-top: 5%;
+  height: 85vh;
+  overflow: scroll;
+  padding-bottom: 2vh;
+}
+
+.password {
+  width: 84%;
+  border-radius: 10px;
+  margin-left: 5%;
+  padding: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 2%;
+}
+
+.password:hover {
+  background-color: rgb(8, 115, 255);
+}
+
+.favicon {
+  border-radius: 5px;
+  /* background-color: rgba(255, 255, 255, 0.952); */
+  width: 14%;
+  /* padding-ottom: 10vh; */
+  /* background: url("https://www.google.com/favicon.ico"); */
+  /* height: 10%; */
+}
+
+.favicon img {
+  width: 100%;
+  margin-top: 10%;
+  border-radius: 10px;
+}
+
+.favicon,
+.content {
+  display: inline-block;
+}
+
+.content {
+  margin-left: 5%;
+}
+
+.title {
+  margin-bottom: 12%;
+  color: white;
+  /* background: blue; */
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.user-mail {
+  margin-top: -18%;
+
+  font-size: 0.95em;
+  color: #ffffffbe;
+  margin-top: -10px;
+}
+
+.new-password {
+  padding: 10%;
+  padding-top: 4%;
+}
+
+.nt {
+  color: white;
+  font-size: 3em;
+  margin-bottom: 3%;
+}
+
+.check,
+.nt {
+  display: inline-block;
+}
+
+.check {
+  background: rgb(20, 115, 255);
+  padding: 2%;
+  border-radius: 1000vw;
+  margin-left: 48%;
+  color: white;
+  margin-top: -20%;
+}
+
+.check:active {
+  background: rgb(6, 60, 131);
+  /* box-shadow: 0px 0px 10px 2px rgb(20, 115, 255); */
+}
+
+.main-baxa {
+  border-top: 2px solid #7c71718e;
+  border-bottom: 1px solid #7c71718e;
+  padding: 2%;
+  padding-bottom: 5%;
+}
+
+.label {
+  font-size: 0.95em;
+  color: gray;
+  margin-bottom: 1%;
+}
+
+input {
+  color: white;
+  font-size: 1.15em;
+  width: 90%;
+  /* font-weight: 700; */
+}
+
+.input::placeholder {
+  color: #fff;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 0.5%;
+  /* padding-top: 0.5%; */
+  padding-bottom: 1%;
+  margin-top: 1%;
+  margin-left: -10px;
+}
+
+.ist {
+  margin: 2%;
+}
+
+.bara {
+  resize: none;
+  width: 90%;
+  height: 15vh;
+  background: #00000018;
+  border: none;
+  padding: 2%;
+  color: white;
+  border-radius: 5px;
+  margin-left: 2%;
+  font-size: 1em;
+  font-family: sans-serif;
+  outline: none;
+}
+
+.container:hover {
+  background-color: rgba(37, 37, 37, 0.288);
+}
+
+@media only screen and (max-width: 600px) {
+  .part-one {
+    width: 100vw;
+    height: 100vh;
+    /* background: red; */
+  }
+  .part-two {
+    margin-left: 100vw;
+  }
+  body {
+    /* background: green; */
+  }
+
+  .favicon {
+    width: 15%;
+  }
+
+  .content {
+    margin-left: 5%;
+    /* background: red; */
+  }
+
+  .title {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 10%;
+    /* margin-top: -50%; */
+  }
+
+  .user-mail {
+    font-size: 0.9em;
+  }
+}
