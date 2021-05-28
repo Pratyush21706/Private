@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <!-- start header -->
+  <head>
+    <script src="js/p5.js"></script>
+    <script src="js/p5.dom.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/app.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="web-fonts-with-css/css/fontawesome-all.min.css"
+    />
+
+    <!-- importing google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- firebase Devta -->
+    <script src="https://cdn.jsdelivr.net/npm/firebase@6.1.0/firebase.js"></script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brain Dead</title>
+  </head>
+  <!-- Header Part ends here -->
+
+  <body>
+    <section class="part-one">
+      <button class="add-pssword">+ Add Password</button>
+      <div class="passwords"></div>
+    </section>
+
+    <section class="part-two">
+      <div class="new-password">
+        <div class="title-container">
+          <h1 class="nt">Add an account</h1>
+          <button class="check" onclick="addAccount()">
+            <i class="fa fa-check"></i>
+          </button>
+        </div>
+        <div class="main-baxa">
+          <div class="container">
+            <p class="label">Username</p>
+            <input type="text" placeholder="example@gmail.com" id="input-1" />
+          </div>
+          <div class="container">
+            <p class="label">Password</p>
+            <input type="text" placeholder="mypassword" id="input-2" />
+          </div>
+          <div class="container">
+            <p class="label">Website</p>
+            <input type="text" placeholder="example.com" id="input-3" />
+          </div>
+        </div>
+        <div class="note-container">
+          <p class="label ist">Notes</p>
+          <textarea
+            type="text"
+            placeholder="example.com"
+            class="bara"
+          ></textarea>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
