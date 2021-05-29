@@ -45,7 +45,14 @@ function finished(error) {
   if (error) {
     console.log(error);
   } else {
-    console.log("wow");
+    document.querySelector(".new-password").style = "display : none";
+    document.querySelector(".new-passwor").style = "display : none";
+    if (window.innerWidth < 600) {
+      console.log("Ss");
+      qq = document.querySelector(".part-two").style = "display : none";
+      document.querySelector(".new-password").style = "display : none";
+      document.querySelector(".new-passwor").style = "display : none";
+    }
   }
 }
 
@@ -67,7 +74,9 @@ function gotData(data) {
     jadoo = aha + aha2;
     gajab = jadoo.split(".");
     main = createDiv("").addClass("password").parent(container);
+    ssixxer = createDiv(key).addClass("thanks").parent(main);
     second = createDiv("").addClass("favicon").parent(main);
+    ssixxer.mousePressed(showFull);
     third = createImg(wxpt).parent(second);
     fourth = createDiv("").addClass("content").parent(main);
     fifth = createP(gajab[0]).addClass("title").parent(fourth);
@@ -79,6 +88,104 @@ function errData(error) {
   if (error) {
     //console.log("ooops");
   } else {
+    if (window.innerWidth < 600) {
+      console.log("Ss");
+      qq = document.querySelector(".part-two").style = "display : none";
+      document.querySelector(".new-password").style = "display : none";
+    }
     //console.log("Wow");
   }
+}
+
+function openNew() {
+  document.querySelector(".new-password").style = "display : block";
+  console.log("ss");
+  if (window.innerWidth < 600) {
+    console.log("www");
+    qq = document.querySelector(".part-two").style = "display : block";
+    qq = document.querySelector(".new-password").style = "display : block";
+    console.log(qq);
+  }
+}
+
+function showFull() {
+  document.querySelector(".new-passwor").style = "display : block";
+  if (window.innerWidth < 600) {
+    document.querySelector(".new-passwor").style = "display : block";
+    document.querySelector(".part-two").style = "display : block";
+  }
+  var listings = selectAll(".aapa");
+  for (var i = 0; i < listings.length; i++) {
+    listings[i].remove();
+    console.log("ww");
+  }
+  msgTo = "Pratyush/" + this.html();
+  var ref = database.ref(msgTo);
+  ref.on("value", gotTotal, errData);
+  console.log("ldf");
+}
+
+gotTotal = function (data) {
+  var listings = selectAll(".aapa");
+  for (var i = 0; i < listings.length; i++) {
+    listings[i].remove();
+    console.log("ww");
+  }
+
+  extract = data.val();
+  // console.log(extract.password);
+  aha = extract.website[0].toUpperCase();
+  aha2 = extract.website.substr(1).toLowerCase();
+  jadoo = aha + aha2;
+  gajab = jadoo.split(".");
+
+  pixp = str(extract.icon);
+  paren = document.querySelector(".favs");
+
+  createImg(pixp).parent(paren).addClass("aapa");
+
+  document.getElementById("cname").innerHTML = gajab[0];
+
+  document.getElementById("uname").value = extract.username;
+  document.getElementById("upsd").value = extract.password;
+  document.getElementById("input-30").value = extract.website;
+  document.getElementById("input-40").innerHTML = extract.note;
+};
+
+function removeit() {
+  database.ref(msgTo).remove(finished);
+}
+
+function backit() {
+  document.querySelector(".new-password").style = "display : none";
+  document.querySelector(".new-passwor").style = "display : none";
+  if (window.innerWidth < 600) {
+    console.log("Ss");
+    qq = document.querySelector(".part-two").style = "display : none";
+    document.querySelector(".new-password").style = "display : none";
+    document.querySelector(".new-passwor").style = "display : none";
+  }
+}
+
+function draw() {
+  if (window.innerWidth < 600) {
+    qq = document.querySelector(".deck").style = "display : block";
+  } else {
+    qq = document.querySelector(".deck").style = "display : none";
+  }
+}
+
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("upsd");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
 }

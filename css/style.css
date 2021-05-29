@@ -26,7 +26,7 @@ div::-webkit-scrollbar {
   background: #101010;
   width: 30vw;
   height: 100vh;
-  box-shadow: 0px 0px 10px 20px rgb(255, 0, 0);
+  /* box-shadow: 0px 0px 10px 20px rgb(255, 0, 0); */
 }
 
 .part-two {
@@ -64,11 +64,25 @@ div::-webkit-scrollbar {
   padding: 1%;
   padding-left: 3%;
   padding-right: 3%;
+  position: relative;
   margin-top: 2%;
 }
 
 .password:hover {
   background-color: rgb(8, 115, 255);
+}
+
+.thanks {
+  color: red;
+  background-color: green;
+  position: absolute;
+  height: 9vh;
+  width: 94%;
+  opacity: 0;
+}
+
+.thanks:active {
+  background-color: red;
 }
 
 .favicon {
@@ -80,6 +94,27 @@ div::-webkit-scrollbar {
   /* height: 10%; */
 }
 
+.favs {
+  border-radius: 5px;
+  width: 6%;
+}
+
+.favs img {
+  width: 100%;
+  margin-top: 10%;
+  border-radius: 10px;
+  margin-bottom: -1.2vh;
+}
+
+.favs,
+.cname {
+  display: inline-block;
+}
+
+#cname {
+  margin-left: 1%;
+}
+
 .favicon img {
   width: 100%;
   margin-top: 10%;
@@ -89,6 +124,12 @@ div::-webkit-scrollbar {
 .favicon,
 .content {
   display: inline-block;
+}
+
+.new-passwor {
+  padding: 10%;
+  padding-top: 3%;
+  display: none;
 }
 
 .content {
@@ -114,8 +155,25 @@ div::-webkit-scrollbar {
 .new-password {
   padding: 10%;
   padding-top: 4%;
+  -webkit-animation-name: bara-hoja;
+  -webkit-animation-name: 2s;
+  transition: 1s;
+  display: none;
 }
 
+@keyframes bara-hoja {
+  from {
+    width: 0px;
+    opacity: 0;
+    height: 0px;
+    padding: 0px;
+  }
+  to {
+    width: fit-content;
+    height: fit-content;
+    padding: 10%;
+  }
+}
 .nt {
   color: white;
   font-size: 3em;
@@ -139,6 +197,26 @@ div::-webkit-scrollbar {
 .check:active {
   background: rgb(6, 60, 131);
   /* box-shadow: 0px 0px 10px 2px rgb(20, 115, 255); */
+}
+
+.heck {
+  background: rgb(29, 29, 29);
+  padding: 2%;
+  border-radius: 1000vw;
+  margin-left: 38%;
+  color: white;
+  margin-top: -20%;
+  font-size: 1.1em;
+}
+
+.reck {
+  background: rgb(29, 29, 29);
+  padding: 2%;
+  border-radius: 1000vw;
+  margin-left: 4%;
+  color: white;
+  margin-top: -20%;
+  font-size: 1.1em;
 }
 
 .main-baxa {
@@ -182,13 +260,13 @@ input {
   resize: none;
   width: 90%;
   height: 15vh;
-  background: #00000018;
+  background: 0;
   border: none;
-  padding: 2%;
+  padding: 1%;
   color: white;
   border-radius: 5px;
   margin-left: 2%;
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: sans-serif;
   outline: none;
 }
@@ -197,17 +275,76 @@ input {
   background-color: rgba(37, 37, 37, 0.288);
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  .nt {
+    width: 60%;
+  }
+
   .part-one {
     width: 100vw;
     height: 100vh;
     /* background: red; */
   }
   .part-two {
-    margin-left: 100vw;
+    margin-left: 0vw;
+    width: 100vw;
+    display: none;
   }
-  body {
-    /* background: green; */
+
+  .check {
+    margin-left: 20%;
+    padding: 5%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10%;
+  }
+
+  .heck {
+    margin-left: 6%;
+    padding: 5%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10%;
+  }
+
+  .deck {
+    margin-left: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 12%;
+    background: rgb(20, 115, 255);
+    padding: 4.5%;
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+    color: white;
+    border-radius: 1000000px;
+    font-size: 1.12em;
+  }
+
+  .favs {
+    width: 16%;
+  }
+
+  #cname {
+    font-size: 2em;
+  }
+
+  .container {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+
+  .main-baxa {
+    margin-bottom: 8%;
+  }
+
+  .label {
+    margin-bottom: 2%;
+  }
+
+  .thanks {
+    height: 11vh;
   }
 
   .favicon {
