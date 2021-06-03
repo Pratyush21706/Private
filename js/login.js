@@ -63,7 +63,6 @@ function onSignIn(googleUser) {
   console.log("ID Token: " + id_token);
 
   localStorage.amre = profile.getGivenName();
-  window.location.reload();
 }
 
 function addCard() {
