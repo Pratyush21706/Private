@@ -70,6 +70,12 @@ function onSignIn(googleUser) {
 
   localStorage.amre = profile.getGivenName();
   localStorage.huaKya ==1;
+  
+    document.querySelector(".home").style = "display : block";
+    document.querySelector(".login").style = "display : none";
+    document.querySelector(".navigation").style = "display : block";
+      var ref = database.ref(localStorage.amre);
+  ref.on("value", gotData, errData);
 }
 
 function addCard() {
