@@ -65,7 +65,7 @@ div::-webkit-scrollbar {
 }
 
 .home {
-  display: block;
+  display: none;
 }
 
 .pwdop::after {

@@ -36,6 +36,14 @@ function setup() {
 
   var ref = database.ref(localStorage.amre);
   ref.on("value", gotData, errData);
+
+  if (localStorage.arme == null) {
+    document.querySelector("login").style = "display : block";
+    document.querySelector("home").style = "display : none";
+  } else {
+    document.querySelector("home").style = "display : block";
+    document.querySelector("login").style = "display : none";
+  }
 }
 
 function onSignIn(googleUser) {
@@ -53,6 +61,7 @@ function onSignIn(googleUser) {
   console.log("ID Token: " + id_token);
 
   localStorage.amre = profile.getGivenName();
+  window.location.reload();
 }
 
 function addCard() {
