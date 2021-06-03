@@ -57,6 +57,8 @@ div::-webkit-scrollbar {
   padding-bottom: 2vh;
 }
 
+
+
 .password {
   width: 84%;
   border-radius: 10px;
@@ -197,6 +199,11 @@ div::-webkit-scrollbar {
 .check:active {
   background: rgb(6, 60, 131);
   /* box-shadow: 0px 0px 10px 2px rgb(20, 115, 255); */
+}
+
+.home { 
+  width  : 100vw;
+  height : 100vh;
 }
 
 .heck {
