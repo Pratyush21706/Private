@@ -1,7 +1,7 @@
 var myPassword = "myPassword";
-var temp = 5;
-var tempo = 5;
-var tempoo = 5;
+var temp = 0;
+var tempo = 0;
+var tempoo = 0;
 
 localStorage.amre;
 
