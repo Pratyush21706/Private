@@ -34,8 +34,7 @@ function setup() {
   console.log(firebase);
   database = firebase.database();
 
-  var ref = database.ref(localStorage.amre);
-  ref.on("value", gotData, errData);
+
 
   if (localStorage.arme == null) {
     document.querySelector(".login").style = "display : block";
@@ -45,6 +44,8 @@ function setup() {
     document.querySelector(".home").style = "display : block";
     document.querySelector(".login").style = "display : none";
     document.querySelector(".navigation").style = "display : block";
+      var ref = database.ref(localStorage.amre);
+  ref.on("value", gotData, errData);
   }
 }
 
