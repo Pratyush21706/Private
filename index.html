@@ -23,96 +23,260 @@
     <!-- firebase Devta -->
     <script src="https://cdn.jsdelivr.net/npm/firebase@6.1.0/firebase.js"></script>
 
+    <!-- ENCRYPTION LIBRATY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+
+    <!-- google login -->
+     <script src="https://apis.google.com/js/platform.js" async defer></script>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="568287602149-06aquh3iikafer7avelntsas3fpfhkj8.apps.googleusercontent.com">
     <title>Brain Dead</title>
   </head>
   <!-- Header Part ends here -->
 
   <body>
-    <section class="part-one">
-      <button class="add-pssword" onclick="openNew()">+ Add Password</button>
-      <div class="passwords"></div>
-    </section>
 
-    <section class="part-two">
-      <div class="new-password">
-        <div class="title-container">
-          <h1 class="nt">Add an account</h1>
-          <button class="check" onclick="addAccount()">
-            <i class="fa fa-check"></i>
-          </button>
+<section class="login">
+  <div class="dcd"><div class = "obi"><img src="./res/ob1.jpg"/></div><p>We are very happy to have you Onboard!<br> Get started by Signing up by :</p>
+  <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div> -->
+</div>
+</section>
+<section class="home">
+    <div class="page-1">
+      <div class = "preloader"><img src="./res/loader.gif" class = "loder"/></div>
+      <section class="part-one">
+        <button class="add-pssword dfgs" onclick="openNew()"><span class = 'pwdop'>+</span></button>
+        <div class="passwords">
+          <div class="tempd" id = "gate">
+      <h2>😟</h2>
+      <h2>You have nothing here</h2>
+      <p>click on the + icon to add something</p>
+    </div>
         </div>
-        <div class="main-baxa">
-          <div class="container">
-            <p class="label">Username</p>
-            <input type="text" placeholder="example@gmail.com" id="input-1" />
-          </div>
-          <div class="container">
-            <p class="label">Password</p>
-            <input type="text" placeholder="mypassword" id="input-2" />
-          </div>
-          <div class="container">
-            <p class="label">Website</p>
-            <input type="text" placeholder="example.com" id="input-3" />
-          </div>
-        </div>
-        <div class="note-container">
-          <p class="label ist">Notes</p>
-          <textarea
-            type="text"
-            placeholder="example.com"
-            class="bara"
-          ></textarea>
-        </div>
-      </div>
+      </section>
 
-      <div class="new-passwor">
-        <div class="title-container">
-          <div class="favs"></div>
-          <h1 class="nt" id="cname">Add an account</h1>
-          <button class="heck" onclick="removeit()">
-            <i class="fa fa-trash"></i>
-          </button>
-          <button class="deck" onclick="backit()">
-            <i class="fa fa-arrow-left"></i>
-          </button>
-          <!-- <button class="check" onclick="addAccount()">
+      <section class="part-two">
+        <div class="new-password">
+          <div class="title-container">
+            <h1 class="nt">Add an account</h1>
+            <button class="check" onclick="addAccount()">
+              <i class="fa fa-check"></i>
+            </button>
+          </div>
+          <div class="main-baxa">
+            <div class="container">
+              <p class="label">Username</p>
+              <input type="text" placeholder="example@gmail.com" id="input-1" />
+            </div>
+            <div class="container">
+              <p class="label">Password</p>
+              <input type="text" placeholder="mypassword" id="input-2" />
+            </div>
+            <div class="container">
+              <p class="label">Website</p>
+              <input type="text" placeholder="example.com" id="input-3" />
+            </div>
+          </div>
+          <div class="note-container">
+            <p class="label ist">Notes</p>
+            <textarea
+              type="text"
+              placeholder="example.com"
+              class="bara"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="new-passwor">
+          <div class="title-container">
+            <div class="favs"></div>
+            <h1 class="nt" id="cname">Add an account</h1>
+            <button class="heck" onclick="removeit()">
+              <i class="fa fa-trash"></i>
+            </button>
+            <button class="deck" onclick="backit()">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+            <!-- <button class="check" onclick="addAccount()">
             <i class="fa fa-check"></i>
           </button> -->
-        </div>
-        <div class="main-baxa">
-          <div class="container">
-            <p class="label">Username</p>
-            <input
+          </div>
+          <div class="main-baxa">
+            <div class="container">
+              <p class="label">Username</p>
+              <input
+                type="text"
+                placeholder="example@gmail.com"
+                id="uname"
+                disabled
+              />
+            </div>
+            <div class="container" onclick="myFunction()">
+              <p class="label">Password</p>
+              <input type="text" placeholder="mypassword" id="upsd" disabled />
+            </div>
+            <div class="container">
+              <p class="label">Website</p>
+              <input type="text" placeholder="example.com" id="input-30"
+              /disabled>
+            </div>
+          </div>
+          <div class="note-container">
+            <p class="label ist">Notes</p>
+            <textarea
               type="text"
-              placeholder="example@gmail.com"
-              id="uname"
+              placeholder="example.com"
+              class="bara"
+              id="input-40"
               disabled
-            />
-          </div>
-          <div class="container" onclick="myFunction()">
-            <p class="label">Password</p>
-            <input type="text" placeholder="mypassword" id="upsd" disabled />
-          </div>
-          <div class="container">
-            <p class="label">Website</p>
-            <input type="text" placeholder="example.com" id="input-30"
-            /disabled>
+            ></textarea>
           </div>
         </div>
-        <div class="note-container">
-          <p class="label ist">Notes</p>
-          <textarea
-            type="text"
-            placeholder="example.com"
-            class="bara"
-            id="input-40"
-            disabled
-          ></textarea>
+      </section>
+    </div>
+
+    <div class="page-2">
+      <section class="part-three">
+          <button class="add-pssword llskd" onclick="openNewCard()"><span class = 'ccop'>+</span></button>
+        <div class="cards"><div class="tempd" id = "late">
+      <h2>😟</h2>
+      <h2>You have nothing here</h2>
+      <p>click on the + icon to add something</p>
+    </div></div>
+      </section>
+      <section class="part-four">
+        <div class="naya-card">
+        <div class = "caerd">
+          <div class = "logo"></div>
+          <div class="card-comp">
+            <input type = "text" placeholder="Card Company" class = "o0"></input></div>
+          <div class="card-num">
+            <input type = "text" class="o" id = "iban" placeholder="Card Number"></input></div>
+          <div class="card-name"><p class="label OOO">Name</p>
+            <input type = "text" class = "o1"></input></div>
+          <div class="card-expr"><p class="label OOO">Expiry</p>
+            <input type = "text" class = "o2"></input></div>
+          <div class="card-cvv"><p class="label OOO">CVV</p>
+            <input type = "text" class = "o3"></input></div>
         </div>
-      </div>
+        <button class="blahs" onclick = "addCard()">Add Card</button>
+</div>
+        
+<div class = "card-show">
+          <div class = "logo"></div>
+          <div class="card-comp">
+              <div class = "favicon"><img class="on-on"/> </div>
+            <input type = "text" class="a" id = "iban" placeholder="Card Number" disabled></input></div>
+          <div class="card-name"><p class="label OOO">Name</p>
+            <input type = "text" class = "a1" disabled></input></div>
+          <div class="card-expr"><p class="label OOO">Expiry</p>
+            <input type = "text" class = "a2" disabled></input></div>
+          <div class="card-cvv"><p class="label OOO">CVV</p>
+            <input type = "text" class = "a3" disabled></input></div>
+              
+        </div>
+        <button class="jhd" onclick="backit3()">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+    </div>
+
+      </section>
+
+    
+    <div class="page-3">
+      <section class="part-five">
+          <button class="add-pssword ffd" onclick="newNote()"><span class = 'nteop'>+</span></button>
+        <div class="notes">  <div class="tempd" id = "wate">
+      <h2>😟</h2>
+      <h2>You have nothing here</h2>
+      <p>click on the + icon to add something</p>
+    </div></div>
+      </section>
+      <section class="part-six">
+        <div class = "note-editor">
+          <div class="titdle" contenteditable="true" aria-autocomplete="none" aria-placeholder="Title" ></div>
+          <div class="page-note" contenteditable="true" ></div>
+          <div class="options">
+    <button onClick="transform('bold', null)">
+      <i class="fas fa-bold"></i>
+    </button>
+    <button onClick="transform('italic', null)">
+      <i class="fas fa-italic"></i>
+    </button>
+    <button onClick="transform('strikeThrough', null)">
+      <i class="fas fa-strikethrough"></i>
+    </button>
+    <button onClick="transform('underline', null)">
+      <i class="fas fa-underline"></i>
+    </button>
+    <div class="seperator"></div>
+    <button onClick="transform('justifyLeft', null)">
+      <i class="fas fa-align-left"></i>
+    </button>
+    <button onClick="transform('justifyCenter', null)">
+      <i class="fas fa-align-center"></i>
+    </button>
+    <button onClick="transform('justifyRight', null)">
+      <i class="fas fa-align-right"></i>
+    </button>
+    <div class="seperator"></div>
+    <button onClick="transform('insertOrderedList', null)">
+      <i class="fas fa-list-ol"></i>
+    </button>
+    <button onClick="transform('insertUnorderedList', null)">
+      <i class="fas fa-list-ul"></i>
+    </button>
+    <div class="seperator"></div>
+    <select onChange="transform('fontName', this.value)" >
+      <option disabled default>Font</option>
+      <option value="Times New Roman">Times</option>
+      <option value="Arial">Arial</option>
+      <option value="Courier New">Courier New</option>
+      <option value="Tahoma">Tahoma</option>
+      <option value="Arial">Verdana</option>
+    </select>
+
+      <button class = "fus" onClick="addNote()">
+        Save
+    </button>
+  </div>
+    <button class="dh" onclick="backit2()">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+        </div>
+      </section>
+    </div>
+
+
+    <section class="navigation" >
+      <button class="nav-button pbt" onclick="openPassword()">
+        <i class="fa fa-key"></i>
+      </button>
+      <button class="nav-button nut" onclick="openNote()">
+        <i class="fa fa-sticky-note"></i>
+      </button>
+      <button class="nav-button lol" onclick="openCard()">
+        <i class="fa fa-credit-card"></i>
+      </button>
     </section>
+    </section>
+
+    
   </body>
 </html>
+
+
+<script>
+document.getElementById('iban').addEventListener('input', function (e) {
+  e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+});
+
+
+function transform(option, argument) {
+  document.execCommand(option, false, argument);
+}
+</script>

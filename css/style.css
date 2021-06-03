@@ -4,7 +4,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: sans-serif;
-  background: #f7f7f7;
+  background: #101010;
   overflow: hidden;
 }
 
@@ -20,22 +20,203 @@ div::-webkit-scrollbar {
   display: none;
 }
 
+/* sections */
+.login {
+  width: 100vw;
+  height: 100vw;
+  background: #000;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.dcd {
+  background: #202225;
+  width: 35vw;
+  height: 35vw;
+  margin-left: 32.5vw;
+  margin-top: 16vh;
+  border-radius: 20px;
+}
+
+.obi {
+  width: 100%;
+  height: 60%;
+}
+
+.obi img {
+  width: 100%;
+}
+
+.dcd p {
+  margin-left: 10%;
+  font-size: 1.1em;
+  color: white;
+  width: 80%;
+  line-height: 1.4em;
+  text-align: center;
+}
+
+.g-signin2 {
+  margin-left: 38%;
+  width: 100vw;
+  margin-top: 4%;
+}
+
+.home {
+  display: block;
+}
+
+.pwdop::after {
+  content: " Add Password";
+}
+
+.ccop::after {
+  content: " Add Card";
+}
+
+.nteop::after {
+  content: " Add Note";
+}
+
+/* sd */
+
+.page-1 {
+  display: block;
+}
+.page-2 {
+  display: none;
+}
+.page-3 {
+  display: none;
+}
+
+.page-2 {
+  width: 95vw;
+  height: 100vh;
+  background: red;
+}
+.nav-button:nth-child(1) {
+  color: chartreuse;
+}
+
 /* Part 1  */
 
 .part-one {
-  background: #101010;
+  background: #222222;
   width: 30vw;
   height: 100vh;
   /* box-shadow: 0px 0px 10px 20px rgb(255, 0, 0); */
 }
 
+.tempd {
+  width: 100%;
+  text-align: center;
+  background: chartreuse;
+  height: 100%;
+  padding-top: 30%;
+  display: none;
+}
+
+.tempd h2:nth-child(1) {
+  color: #121212;
+  font-size: 5em;
+  margin-bottom: 10px;
+}
+.tempd h2 {
+  color: #121212;
+}
+.tempd p {
+  color: #0e0e0e;
+  font-size: 1em;
+}
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000d0;
+  width: 30vw;
+  height: 100vh;
+  /* box-shadow: 0px 0px 10px 20px rgb(255, 0, 0); */
+}
+
+.loder {
+  width: 20%;
+  margin-top: 40vh;
+  margin-left: 22vh;
+  opacity: 0.8;
+}
+
 .part-two {
   background: #121212;
-  width: 70vw;
+  width: 65vw;
   height: 100vh;
   position: absolute;
   top: 0;
   margin-left: 30vw;
+}
+
+.part-three {
+  background: #222222;
+  width: 30vw;
+  height: 100vh;
+  /* box-shadow: 0px 0px 10px 20px rgb(255, 0, 0); */
+}
+
+.part-four {
+  background: #121212;
+  width: 65vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  margin-left: 30vw;
+}
+
+.part-five {
+  background: #222222;
+  width: 30vw;
+  height: 100vh;
+  /* box-shadow: 0px 0px 10px 20px rgb(255, 0, 0); */
+}
+
+.part-six {
+  background: #121212;
+  width: 65vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  margin-left: 30vw;
+}
+
+.navigation {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 5vw;
+  height: 92vh;
+  z-index: +8678;
+  background: rgb(19, 19, 19);
+  padding-top: 6vh;
+  padding-bottom: 2vh;
+}
+
+.nav-button {
+  display: table;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  /* height: 8vh; */
+  /* background: red; */
+  padding-top: 2vh;
+  padding-bottom: 5vh;
+  /* border: 2px solid green; */
+}
+
+.nav-button::after {
+  /* content: "   Passwords"; */
 }
 
 .add-pssword {
@@ -57,6 +238,12 @@ div::-webkit-scrollbar {
   padding-bottom: 2vh;
 }
 
+.cards {
+  margin-top: 5%;
+  height: 85vh;
+  overflow: scroll;
+  padding-bottom: 2vh;
+}
 .password {
   width: 84%;
   border-radius: 10px;
@@ -66,6 +253,27 @@ div::-webkit-scrollbar {
   padding-right: 3%;
   position: relative;
   margin-top: 2%;
+}
+
+.notes {
+  margin-top: 5%;
+  height: 85vh;
+  overflow: scroll;
+  padding-bottom: 2vh;
+}
+
+.notep {
+  width: 84%;
+  border-radius: 10px;
+  margin-left: 5%;
+  /* padding: 1%; */
+  padding-left: 3%;
+  padding-right: 4%;
+  position: relative;
+  margin-top: 2%;
+  background: rgba(0, 0, 0, 0.475);
+  backdrop-filter: blur(40%);
+  overflow: hidden;
 }
 
 .password:hover {
@@ -134,10 +342,11 @@ div::-webkit-scrollbar {
 
 .content {
   margin-left: 5%;
+  /* background: red; */
 }
 
 .title {
-  margin-bottom: 12%;
+  /* margin-bottom: %; */
   color: white;
   /* background: blue; */
   font-size: 1.3em;
@@ -146,7 +355,6 @@ div::-webkit-scrollbar {
 
 .user-mail {
   margin-top: -18%;
-
   font-size: 0.95em;
   color: #ffffffbe;
   margin-top: -10px;
@@ -189,7 +397,7 @@ div::-webkit-scrollbar {
   background: rgb(20, 115, 255);
   padding: 2%;
   border-radius: 1000vw;
-  margin-left: 48%;
+  margin-left: 28%;
   color: white;
   margin-top: -20%;
 }
@@ -275,7 +483,220 @@ input {
   background-color: rgba(37, 37, 37, 0.288);
 }
 
+/* Page 2 */
+.naya-card {
+  display: none;
+}
+
+.caerd {
+  width: 45%;
+  padding: 5%;
+  height: 30%;
+  background: rgb(255, 121, 128);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 121, 128, 1) 0%,
+    rgba(202, 73, 228, 1) 100%
+  );
+  backdrop-filter: blur(5px);
+  margin-top: 20%;
+  margin-left: 25%;
+  border-radius: 20px;
+  display: block;
+}
+
+.card-show {
+  width: 45%;
+  padding: 5%;
+  height: 30%;
+  background: rgb(255, 121, 128);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 121, 128, 1) 0%,
+    rgba(202, 73, 228, 1) 100%
+  );
+  backdrop-filter: blur(5px);
+  margin-top: 20%;
+  margin-left: 25%;
+  border-radius: 20px;
+  display: none;
+}
+
+.caerd input {
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.card-show input {
+  border-bottom: 0px solid #f7f7f7;
+}
+
+#iban {
+  margin-top: 10%;
+}
+
+.card-name {
+  width: 40%;
+  font-weight: 700;
+  margin-top: 7%;
+  display: inline-block;
+}
+
+.card-comp {
+  width: 50%;
+}
+
+.card-expr {
+  width: 15%;
+  margin-top: 2%;
+  display: inline-block;
+  margin-left: 20%;
+}
+
+.card-cvv {
+  width: 15%;
+  margin-top: 2%;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.OOO {
+  color: rgb(238, 238, 238);
+  font-size: 0.8em;
+  margin-bottom: 5%;
+}
+
+.blahs {
+  margin-left: 39%;
+  font-size: 1.2em;
+  background-color: dodgerblue;
+  width: 30%;
+  padding: 1%;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+
+/* page 3 */
+.note-editor {
+  width: 90%;
+  height: 90%;
+  background: black;
+  padding: 2%;
+  margin-top: 2%;
+  margin-left: 2.5%;
+  display: none;
+  border-radius: 10px;
+}
+
+.titdle {
+  width: 100%;
+  height: fit-content;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  font-size: 2em;
+  min-height: 5%;
+  max-height: 6%;
+  overflow: scroll;
+}
+.page-note {
+  width: 100%;
+  height: fit-content;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  font-size: 1em;
+  margin-top: 2%;
+  padding-left: 1%;
+  height: 85%;
+  overflow: scroll;
+}
+
+.options {
+  width: 100%;
+  height: 30pt;
+  margin-top: 5pt;
+}
+
+.daad {
+  color: rgb(224, 224, 224);
+  margin-top: -6%;
+  width: 80%;
+  height: 1em;
+  overflow: hidden;
+}
+
+div {
+  cursor: pointer;
+}
+
+.seperator {
+  display: inline;
+  border-left: 1px solid #ddd;
+  height: 30pt;
+}
+.options button {
+  margin: 0;
+  padding: 0;
+  height: 30pt;
+  width: 30pt;
+  background-color: rgb(0, 0, 0);
+  border: 0;
+  cursor: pointer;
+  color: dodgerblue;
+  user-select: none;
+}
+.options button:active  {
+  color: #333;
+}
+select {
+  height: 30pt;
+  -webkit-appearance: none;
+  border: 0;
+  padding-left: 5pt;
+  padding-right: 29%;
+  outline: none;
+  background: none;
+  color: dodgerblue;
+}
+input[type="number"] {
+  height: 30pt;
+  border: 0;
+  padding: 0;
+  padding-left: 5pt;
+  padding-right: 5pt;
+  outline: none;
+}
+
+.fus {
+  font-size: 2em;
+  margin-left: 300%;
+  background: firebrick;
+  padding: 100px;
+}
+
 @media screen and (max-width: 600px) {
+  .login {
+    width: 100vw;
+    height: 100vh;
+    background: #202225;
+  }
+
+  .obi {
+    width: 100vw;
+    height: 100vh;
+    margin-left: -32.5vw;
+    margin-top: -16vh;
+  }
+
+  .dcd p {
+    margin-top: -60vw;
+    width: 90vw;
+    margin-left: -30vw;
+    font-size: 1.6em;
+  }
+
+  .g-signin2 {
+    margin-left: 5vw;
+  }
+
   .nt {
     width: 60%;
   }
@@ -283,12 +704,79 @@ input {
   .part-one {
     width: 100vw;
     height: 100vh;
+    margin-top: -5%;
     /* background: red; */
   }
   .part-two {
     margin-left: 0vw;
     width: 100vw;
     display: none;
+  }
+
+  .part-three {
+    width: 100vw;
+    height: 100vh;
+    margin-top: -5%;
+    /* background: red; */
+  }
+  .part-four {
+    margin-left: 0vw;
+    width: 100vw;
+    display: none;
+  }
+
+  .part-five {
+    width: 100vw;
+    height: 100vh;
+    margin-top: -5%;
+    /* background: red; */
+  }
+
+  .fus {
+    font-size: 1em;
+    margin-left: 50vw;
+  }
+
+  select {
+    display: none;
+  }
+  .part-six {
+    margin-left: 0vw;
+    width: 100vw;
+    margin-top: -0vh;
+    display: none;
+  }
+
+  .caerd {
+    width: 75%;
+    padding: 5%;
+    height: 30%;
+    background: rgb(255, 121, 128);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 121, 128, 1) 0%,
+      rgba(202, 73, 228, 1) 100%
+    );
+    backdrop-filter: blur(5px);
+    margin-top: 25%;
+    margin-left: 5%;
+    border-radius: 20px;
+  }
+
+  .card-show {
+    width: 80%;
+    padding: 5%;
+    height: 30%;
+    background: rgb(255, 121, 128);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 121, 128, 1) 0%,
+      rgba(202, 73, 228, 1) 100%
+    );
+    backdrop-filter: blur(5px);
+    margin-top: 25%;
+    margin-left: 5%;
+    border-radius: 20px;
   }
 
   .check {
@@ -359,11 +847,117 @@ input {
   .title {
     font-size: 1.3em;
     font-weight: 500;
-    margin-bottom: 10%;
+    margin-bottom: 30%;
     /* margin-top: -50%; */
   }
 
   .user-mail {
     font-size: 0.9em;
+    /* margin-bottom: -10%; */
+  }
+
+  .navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding-top: 4%;
+    height: 2.5vh;
+    z-index: 72;
+  }
+
+  .nav-button {
+    display: inline-block;
+    width: 30%;
+    padding: 0px;
+    margin-top: -10000px;
+    /* padding-bottom: 51%; */
+    /* background: green; */
+  }
+
+  .nav-button:nth-child(3) {
+    width: 20%;
+  }
+
+  .add-pssword {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: +76;
+    width: 10vw;
+    border-radius: 3809px;
+    /* border: 5px solid red; */
+    margin: 4%;
+    margin-right: 4%;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.158);
+  }
+
+  .daad {
+    color: rgb(224, 224, 224);
+    margin-top: -26%;
+    width: 80%;
+    height: 1em;
+    overflow: hidden;
+  }
+
+  .preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000d0;
+    width: 100vw;
+    height: 100vh;
+    /* box-shadow: 0px 0px 10px 20px rgb(255, 0, 0); */
+  }
+
+  .loder {
+    width: 10%;
+    margin-top: 40vh;
+    margin-left: 45vw;
+  }
+
+  .pwdop::after {
+    content: " ";
+  }
+
+  .ccop::after {
+    content: " ";
+  }
+
+  .nteop::after {
+    content: " ";
+  }
+
+  .dh {
+    background-color: red;
+    padding: 2px;
+    margin-left: 50vw;
+    margin-top: 0vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.5em;
+    background-color: dodgerblue;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .jhd {
+    padding: 2px;
+    margin-left: 50vw;
+    margin-top: 0vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.5em;
+    background-color: dodgerblue;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 100vh;
+  }
+
+  .options {
+    background: #000;
+    height: fit-content;
   }
 }
