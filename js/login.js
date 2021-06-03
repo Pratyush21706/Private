@@ -38,11 +38,13 @@ function setup() {
   ref.on("value", gotData, errData);
 
   if (localStorage.arme == null) {
-    document.querySelector("login").style = "display : block";
-    document.querySelector("home").style = "display : none";
+    document.querySelector(".login").style = "display : block";
+    document.querySelector(".home").style = "display : none";
+    document.querySelector(".navigation").style = "display : none";
   } else {
-    document.querySelector("home").style = "display : block";
-    document.querySelector("login").style = "display : none";
+    document.querySelector(".home").style = "display : block";
+    document.querySelector(".login").style = "display : none";
+    document.querySelector(".navigation").style = "display : block";
   }
 }
 
