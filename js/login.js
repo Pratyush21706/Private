@@ -4,7 +4,6 @@ var tempo = 5;
 var tempoo = 5;
 
 localStorage.amre;
-localStorage.huaKya;
 
 function setup() {
   mailInput = select("#input-1");
@@ -35,14 +34,14 @@ function setup() {
   console.log(firebase);
   database = firebase.database();
 
-      console.log(localstorage.aram)
-      console.log(localstorage.huaKya)
 
-  if (localStorage.aram == null) {
+
+  if (localStorage.arme == null) {
     document.querySelector(".login").style = "display : block";
     document.querySelector(".home").style = "display : none";
     document.querySelector(".navigation").style = "display : none";
   } 
+}
 
 function onSignIn(googleUser) {
   // Useful data for your client-side scripts:
@@ -59,13 +58,11 @@ function onSignIn(googleUser) {
   console.log("ID Token: " + id_token);
 
   localStorage.amre = profile.getGivenName();
-  localStorage.huaKya ==1;
-  
     document.querySelector(".home").style = "display : block";
     document.querySelector(".login").style = "display : none";
     document.querySelector(".navigation").style = "display : block";
       var ref = database.ref(localStorage.amre);
-    ref.on("value", gotData, errData);
+  ref.on("value", gotData, errData);
 }
 
 function addCard() {
