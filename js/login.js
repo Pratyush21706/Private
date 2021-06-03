@@ -38,21 +38,11 @@ function setup() {
       console.log(localstorage.aram)
       console.log(localstorage.huaKya)
 
-  if (localStorage.huaKya == null) {
+  if (localStorage.aram == null) {
     document.querySelector(".login").style = "display : block";
     document.querySelector(".home").style = "display : none";
     document.querySelector(".navigation").style = "display : none";
-  } else {
-  }
-  
-  if(localStorage.huaKya ==1)
-  {
-     document.querySelector(".home").style = "display : block";
-    document.querySelector(".login").style = "display : none";
-    document.querySelector(".navigation").style = "display : block";
-      var ref = database.ref(localStorage.amre);
-  ref.on("value", gotData, errData);
-  }
+  } 
 
 function onSignIn(googleUser) {
   // Useful data for your client-side scripts:
@@ -75,7 +65,7 @@ function onSignIn(googleUser) {
     document.querySelector(".login").style = "display : none";
     document.querySelector(".navigation").style = "display : block";
       var ref = database.ref(localStorage.amre);
-  ref.on("value", gotData, errData);
+    ref.on("value", gotData, errData);
 }
 
 function addCard() {
